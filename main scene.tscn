@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://oelnnm1g2j6t"]
+
+[ext_resource type="Script" uid="uid://bpjvcq6pb6v31" path="res://main_scene.gd" id="1_3ddp3"]
+[ext_resource type="Texture2D" uid="uid://de551inddl1ww" path="res://Imagen de ChatGPT 11 oct 2026, 23_15_36.png" id="2_3ddp3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipr56"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1067940948]
+position = Vector2(100, 100)
+scale = Vector2(0.18, 0.18)
+script = ExtResource("1_3ddp3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1930873670]
+position = Vector2(-3, -9)
+sprite_frames = SubResource("SpriteFrames_ipr56")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=201629484]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1477936800]
+
+[node name="Superior" type="Sprite2D" parent="." unique_id=745962254]
+z_index = 1
+position = Vector2(-31, 49)
+texture = ExtResource("2_3ddp3")
+hframes = 2
+
+[node name="Inferior" type="Sprite2D" parent="." unique_id=296917057]
+position = Vector2(10, 148)
+texture = ExtResource("2_3ddp3")
+hframes = 2
+frame = 1
